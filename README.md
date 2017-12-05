@@ -1,4 +1,4 @@
-Invoice generator
+# Invoice generator
 
 ## Setup
 
