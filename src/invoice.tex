@@ -59,19 +59,16 @@
 % content definition %
 %%%%%%%%%%%%%%%%%%%%%%
 
-\title{Title of the invoice}
+\title{Spanish lessons invoice}
 \date{\today }
 \xdef\invoicenum{001}
-\xdef\companyname{Comp.}
-\xdef\companyaddress{foo, bar street, XXXXX City}
-\xdef\companysiren{XXX XXXX XXXX}
-\xdef\companytel{XX\,XX\,XX\,XX\,XX}
-\xdef\companyemail{xxx@xxx.xxx}
-\xdef\bankiban{XXXX\,XXXX\,XXXX\,XXXX\,XXXX\,XXXX\,XXXX}
-\xdef\bankbic{XXX\,XXX\,XXX}
-\long\xdef\conditions{write the sell conditions here
-
-on several lines}
+\xdef\companyname{Albert Suarez}
+\xdef\companyaddress{McDonald St, 6060 Yokine}
+\xdef\companyabn{24 604 802 552}
+\xdef\companytel{0481 334 816}
+\xdef\companyemail{alsumo95@gmail.com}
+\xdef\bankbsb{736073}
+\xdef\bankaccno{598519}
 
 \makeatletter
 \let\thetitle\@title
@@ -120,9 +117,6 @@ on several lines}
 %
 }}
 \vskip 3mm%
-{\fontsize{0.44cm}{0.5cm}%
-\emph{thank you for your confidence!}%
-}
 }%
 %
 \parbox[b][2cm][t]{0.35\textwidth}{\ttfamily {%
@@ -138,19 +132,6 @@ Invoice%
 \leavevmode\kern \rightalignment \parbox{0.35\textwidth}{\ttfamily N\textsuperscript{o} \invoicenum\\
 \today }
 
-\vskip 0.7cm
-
-\leavevmode\kern \rightalignment\kern -3mm \colorbox{gray!85}{
-  \kern 1mm\begin{minipage}[t]{0.5\textwidth}
-    \color{white}
-    \vskip 2mm
-    Company \textbf{Foo},\\
-    Temple Bar,\\
-    Dublin.\\
-    \vspace*{-3mm}%
-  \end{minipage}
-}
-
 \vskip 2.3cm
 
 \begin{center}
@@ -163,14 +144,15 @@ Invoice%
 \begin{longtabu} to \textwidth{X[6,L,m]X[1,c,m]X[1,c,m]X[0.5,r,m]}
     \taburowcolors 1{headcolor .. headcolor}
     \rowfont[c]{\bfseries}%
-    product & unit price & qty. & price \tabularnewline
+    item        & unit price    & qty.    & price     \tabularnewline
     \taburowcolors 1{tablecolor1 .. tablecolor2}
-    My product 1 & 15\,€ & 10 & 150\,€\\
-    My product 2 & 25\,€ & 10 & 250\,€\\
-    My product 3 & 35\,€ & 10 & 350\,€\\
-    My product 4 & 45\,€ & 10 & 450\,€\\
-    \taburowcolors 1{headcolor .. headcolor}\tabulinesep=3mm
-    Total\footnote{\footnotestyle{example of footnote}} & & & \hbox to 0pt{\vbox to 0cm{\kern 0.61cm 1200\,€\vss}\hss}\\[3mm]
+
+    Item 1      & \$30          & X       & \$X       \\
+    
+    \taburowcolors 1{headcolor .. headcolor}\tabulinesep=1mm
+    
+    Total & & & \hbox to 0pt{\vbox to 0cm{\kern 0.35cm   \$X   \vss}\hss}\\[1mm]
+
 \end{longtabu}
 
 \vfill
@@ -179,16 +161,14 @@ Invoice%
 
 \setlength{\columnsep}{1.5cm}
 \begin{multicols}{2}
-\noindent\companyname{},\\
-Auto-entrepreneur {\small (APE XXXXX)},\\
-\companyaddress{},\\
-SIREN\,: \companysiren{},\\
-\hbox to 1cm{Tél\,:\hss} \companytel,\\
-\hbox to 1cm{Mél\,:\hss} \companyemail,\\
-\hbox to 1cm{IBAN\,:\hss} \bankiban,\\
-\hbox to 1cm{BIC\,:\hss} \bankbic
+\noindent\companyname{}\\
+Teacher\\
+\companyaddress{}\\
+ABN\,: \companyabn{}\\
+\hbox to 2cm{Phone:\hss} \companytel\\
+\hbox to 2cm{Mail:\hss} \companyemail\\
+\hbox to 2cm{BSB:\hss} \bankbsb\\
+\hbox to 2cm{Account No.:\hss} \bankaccno
 \end{multicols}
-
-\footnotestyle{\textbf{Conditions de paiement:} \conditions }
 
 \end{document}
